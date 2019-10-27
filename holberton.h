@@ -20,8 +20,15 @@ typedef struct op
 int _printf(const char *format, ...);
 void (*convert_c(const char *))(va_list list);
 
+/*  */
+void print_number(int n);
+
+
 /* print_especials  */
 
 void print_c(va_list letter);
+void print_d(va_list letter);
+void print_s(va_list letter);
+void print_i(va_list letter);
 
 #endif
