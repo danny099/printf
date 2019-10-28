@@ -8,7 +8,7 @@
  * Return: On succes .
  * On error.
  */
-void (*convert_c(const char *symbol))(va_list list)
+void (*convert(const char *symbol))(va_list list)
 {
 	int i;
 

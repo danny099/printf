@@ -18,7 +18,7 @@ typedef struct op
 } op_t;
 
 int _printf(const char *format, ...);
-void (*convert_c(const char *))(va_list list);
+void (*convert(const char *))(va_list list);
 
 /*  */
 void print_number(int n);
