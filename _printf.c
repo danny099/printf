@@ -17,5 +17,5 @@ int _printf(const char *format, ...)
 			write(1, (format + i), 1);
 	}
 	va_end(args);
-	return (0);
+	return (i);
 }
