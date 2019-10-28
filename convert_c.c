@@ -17,10 +17,9 @@ void (*convert_c(const char *symbol))(va_list list)
 		{"d", print_d},
 		{"s", print_s},
 		{"i", print_i},
-		{NULL, NULL}
 	};
 
-	for (i = 0; (ops[i].op) != NULL; i++)
+	for (i = 0; i < 4; i++)
 	{
 		if (*symbol == *(ops[i].op))
 			return ops[i].f;
