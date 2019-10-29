@@ -17,6 +17,6 @@ void returnNumber(int n, char *buffersito);
 int print_c(va_list va, char *buffersito);
 int print_s(va_list va, char *buffersito);
 int print_d_i(va_list va, char *buffersito);
-int print_percent(va_list va, char *buffersito);
+int print_por(va_list va, char *buffersito);
 
 #endif
