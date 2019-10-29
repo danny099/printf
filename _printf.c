@@ -16,21 +16,24 @@ int _printf(const char *format, ...)
 	{
 		if (*(format + i) == '%')
 		{
-			i++;
-				if (*(format + i) != '%')
-				{
-					add = type(format + i)(args, buffersito);
-					count += add;
-					buffersito += add;
-					i++;
-				}
+			if (*(format + i) == '\0')
+			{
+				count = -1;
+				break;
+			}
+			if (type(format + i + 1))
+			{
+				i++;
+				add = type(format + i)(args, buffersito);
+				count += add;
+				buffersito += add;
+				continue;
+			}
 		}
 		*buffersito = *(format + i);
 		count++;
 		buffersito++;
 	}
-	*buffersito = '\0';
-
 	write(1, buffer_extra, count);
 	va_end(args);
 	free(buffer_extra);
