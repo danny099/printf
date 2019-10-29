@@ -20,4 +20,5 @@ int _printf(const char *format, ...);
 int (*type(const char *symbol))(va_list va);
 int print_c(va_list va);
 int print_s(va_list va);
+int print_number(va_list va);
 #endif
