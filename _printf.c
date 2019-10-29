@@ -1,8 +1,14 @@
 #include "holberton.h"
 
 /**
-  * comentarios de dannysito
-  */
+ *_printf - is the principal function is in charge
+ *of evaluete the different cases
+ *
+ *@format: is a pointer char
+ * Return: On succes count this variable count the number of caracthers.
+ * On error -1.
+ */
+
 int _printf(const char *format, ...)
 {
 

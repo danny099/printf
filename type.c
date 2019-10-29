@@ -1,4 +1,11 @@
 #include "holberton.h"
+/**
+*type-this function redirects to other functions depends the format of receives
+ *
+ *@simbolo: is a pointer receives a chr
+ * Return: On succes the function selected.
+ * On error NULL.
+ */
 
 int (*type(const char *simbolo))(va_list va)
 {
