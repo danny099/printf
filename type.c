@@ -5,7 +5,7 @@ int (*type(const char *simbolo))(va_list va, char *buffer)
 	op_t func[] = {
 		{"c", print_c},
 		{"s", print_s},
-		{"%", print_percent}
+		{"%", print_por}
 	};
 	int i;
 
