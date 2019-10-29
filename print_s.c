@@ -1,5 +1,14 @@
 #include "holberton.h"
 
+/**
+ * print_s - save in buffer the characters
+ *
+ *@va: is a list that contains a chars
+ *@buffersito: is a space of memory where are allocate the chars
+ * Return: On succes the number of caracthers.
+ * On error 6.
+ */
+
 int print_s(va_list va, char *buffersito)
 {
 	char *str;
