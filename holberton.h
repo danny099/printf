@@ -1,35 +1,22 @@
 #ifndef PRINTF
 #define PRINTF
 
-#include <stdio.h>
-#include <stdlib.h>
 #include <stdarg.h>
+#include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
-/**
- * struct op - Struct op
- *
- * @op: The operator
- * @f: The function associated
- */
-typedef struct op
+
+typedef struct formatter
 {
-	char *op;
-	int (*f)(va_list f);
+	char *string;
+	int (*f)(va_list va, char *buffersito);
 } op_t;
 
 int _printf(const char *format, ...);
-int (*convert_c(const char *))(va_list list);
-
-/*  */
-int print_number(int n);
-
-
-/* print_especials  */
-
-int print_c(va_list letter);
-int print_d(va_list letter);
-int print_s(va_list letter);
-int print_i(va_list letter);
+int (*type(const char *symbol))(va_list va, char *buffersito);
+void returnNumber(int n, char *buffersito);
+int print_c(va_list va, char *buffersito);
+int print_s(va_list va, char *buffersito);
+int print_d_i(va_list va, char *buffersito);
+int print_percent(va_list va, char *buffersito);
 
 #endif
