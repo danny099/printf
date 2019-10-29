@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 				write(1, (format + i), 1);
 				i++;
 			}
-			else if (*(format + i + 1) != 'c' && *(format + i + 1) != 's')
+			else if (*(format + i + 1) != 'c' && *(format + i + 1) != 's' && *(format + i + 1) != 'd' && *(format + i + 1) != 'i')
 			{
 				count++;
 				write(1, (format + i), 1);

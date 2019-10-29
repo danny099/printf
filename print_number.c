@@ -7,7 +7,7 @@
  */
 int print_number(va_list va)
 {
-	unsigned int i, num, index, allocated, flag, negative = 0;
+	unsigned int i, num, index, allocated, negative = 0;
 	int intager;
 	char *ptr;
 
