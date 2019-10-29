@@ -9,29 +9,21 @@
  * On error 6.
  */
 
-int print_s(va_list va, char *buffersito)
+int print_s(va_list va)
 {
-	char *str;
-	char *null = "(null)";
-	int i;
+	int i = 0;
 
-	str = va_arg(va, char *);
-	if (str == NULL) /* Si es nulo */
+	char *str = (va_arg(va, char*));
+
+	if (str == NULL)
 	{
-		for (i = 0; *(null + i); i++)
-		{
-			*buffersito = *(null + i);
-			buffersito++;
-		}
-
+		write(1, "(null)", 6);
 		return (6);
 	}
-
-	for (i = 0; *(str + i); i++)
+	while (*(str + i))
 	{
-		*buffersito = *(str + i);
-		buffersito++;
+		write(1, (str + i), 1);
+		i++;
 	}
-
 	return (i);
 }

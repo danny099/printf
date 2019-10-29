@@ -9,14 +9,10 @@
  * On error 1.
  */
 
-int print_c(va_list va, char *buffer)
+int print_c(va_list va)
 {
-	unsigned char ch;
+	unsigned char ch = va_arg(va, int);
 
-	ch = va_arg(va, int);
-	if (ch == '\0')
-		return (1);
-
-	*buffer = ch;
+	write(1, &ch, 1);
 	return (1);
 }
