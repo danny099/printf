@@ -7,7 +7,7 @@ int (*type(const char *simbolo))(va_list va, char *buffersito)
 		{"s", print_s},/*
 		{"d", print_d_i},
 		{"i", print_d_i},*/
-		{"%", print_percent}
+		{"%", print_por}
 	};
 	int i;
 
