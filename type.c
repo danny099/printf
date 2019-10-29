@@ -3,11 +3,11 @@
 int (*type(const char *simbolo))(va_list va, char *buffersito)
 {
 	op_t func[] = {
-		{"c", print_c}/*,
-		{"s", print_s},
+		{"c", print_c},
+		{"s", print_s},/*
 		{"d", print_d_i},
-		{"i", print_d_i},
-		{"%", print_percent}*/
+		{"i", print_d_i},*/
+		{"%", print_percent}
 	};
 	int i;
 
