@@ -4,8 +4,12 @@
  * comentarios que llenara dannysito
  */
 
-void print_c(va_list letter)
+int print_c(va_list letter)
 {
 	char ch = va_arg(letter, int);
-	write(1, &ch, 1);
+
+	if (!ch)
+		return (-1);
+
+	return write(1, &ch, 1);
 }

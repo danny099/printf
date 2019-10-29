@@ -1,8 +1,8 @@
 #include "holberton.h"
 
-void print_number(int n)
+int print_number(int n)
 {
-	unsigned int num = n;
+	int num = n;
 	char negative = '-';
 	char digit;
 
@@ -17,5 +17,5 @@ void print_number(int n)
 
 	digit = (num % 10) + '0';
 
-	write(1, &digit, 1);
+	return write(1, &digit, 1);
 }

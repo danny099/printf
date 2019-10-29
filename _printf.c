@@ -1,9 +1,12 @@
 #include "holberton.h"
-#include <stdio.h>
 
 int _printf(const char *format, ...)
 {
+	if (!format || (format[0] == '%' && format[1] == '\0'))
+		return(-1);
+
 	int i;
+
 
 	va_list args;
 
@@ -12,7 +15,7 @@ int _printf(const char *format, ...)
 	for (i = 0; *(format + i) != '\0'; i++)
 	{
 		if (*(format + i) == '%')
-			convert(format + ++i)(args);
+			convert_c(format + ++i)(args);
 		else
 			write(1, (format + i), 1);
 	}

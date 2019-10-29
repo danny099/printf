@@ -1,4 +1,5 @@
-#include "holberton.h"
+#i#i#include "holberton.h"
+
 
 /**
  * convert_c - function
@@ -8,7 +9,7 @@
  * Return: On succes .
  * On error.
  */
-void (*convert(const char *symbol))(va_list list)
+int (*convert(const char *symbol))(va_list list)
 {
 	int i;
 
@@ -23,7 +24,9 @@ void (*convert(const char *symbol))(va_list list)
 	{
 		if (*symbol == *(ops[i].op))
 			return ops[i].f;
+		else
+			exit(1);
 	}
 	write(2, "Not found", 9);
-	exit(1);
+	//exit (1);
 }

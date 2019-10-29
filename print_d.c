@@ -4,9 +4,9 @@
  * comentarios que llenara dannysito
  */
 
-void print_d(va_list letter)
+int print_d(va_list letter)
 {
 
 	int d = va_arg(letter, int);
-	print_number(d);
+	return print_number(d);
 }
