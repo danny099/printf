@@ -1,15 +1,12 @@
 #include "holberton.h"
-
-/**
- * comentarios que llenara dannysito
- */
-
-int print_c(va_list letter)
+int print_c(va_list va, char *buffer)
 {
-	char ch = va_arg(letter, int);
+	unsigned char ch;
 
-	if (!ch)
-		return (-1);
+	ch = va_arg(va, int);
+	if (ch == '\0')
+		return (1);
 
-	return write(1, &ch, 1);
+	*buffer = ch;
+	return (1);
 }
