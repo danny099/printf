@@ -3,22 +3,22 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	char *buffersito, *buffer_extra;
-	int i, count = 0, lenght = 0, size = 0;
+	char *buffersito, *buffer_max;
+	int i, counter, lenght = 0, size = 0;
 
 	buffersito = malloc(sizeof(char) * 1024);
 	if (buffersito == NULL || format == NULL)
 		return (-1);
-	buffer_extra = buffersito;
+	buffer_max = buffersito;
 
 	va_start(args, format);
 	for (i = 0; *(format + i); i++)
 	{
 		if (*(format + i) == '%')
 		{
-			if (*(format + i) == '\0')
+			if (*(format + i + 1) == '\0')
 			{
-				count = -1;
+				counter = -1;
 				break;
 			}
 			if (type(format + i + 1))
@@ -27,18 +27,19 @@ int _printf(const char *format, ...)
 				size = type(format + i)(args, buffersito);
 				buffersito += size;
 				lenght += size;
-				count = lenght;
+				counter = lenght;
 				continue;
 			}
 		}
 		*buffersito = *(format + i);
 		lenght++;
 		buffersito++;
-		count = lenght;
+		counter = lenght;
 	}
-	write(1, buffer_extra, lenght);
-	va_end(args);
-	free(buffer_extra);
 
-	return (count);
+	write(1, buffer_max, lenght);
+	va_end(args);
+	free(buffer_max);
+
+	return (counter);
 }
