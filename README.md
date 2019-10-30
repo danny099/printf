@@ -1,9 +1,10 @@
 # Printf 📜
 
-##DESCRIPTION
-_printf It is a function in charge of printing different types of formats, for example char, int, string_
+**DESCRIPTION
 
-##EXAMPLES
+_printf It is a function in charge of printing different types of formats, for example char, int, string
+
+**EXAMPLES
      
      print a string
 
@@ -22,7 +23,7 @@ _printf It is a function in charge of printing different types of formats, for e
      return (_printf("%c", var));
      }
      
-##AUTORS
+**AUTORS
 * Felipe Cubillos and Danny Martinez
 
 ![](https://www.holbertonschool.com/holberton-logo.png)
